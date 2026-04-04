@@ -241,7 +241,7 @@ export function ChatPanel({ onChatComplete }: { onChatComplete?: () => void } = 
     const q = (location.state as { chatQuery?: string } | null)?.chatQuery?.trim();
     if (!q || !repoReady) return;
     navigate(location.pathname, { replace: true, state: {} });
-    setInput(q);
+    setInput("");
     void sendChatQuestion(q);
   }, [location.key, location.pathname, navigate, repoReady, sendChatQuestion]);
 
