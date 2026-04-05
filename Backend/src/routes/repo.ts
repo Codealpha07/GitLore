@@ -611,6 +611,10 @@ repoRouter.post("/repo/:owner/:name/setup-webhook", async (c) => {
           githubToken: user.access_token,
           username: user.username,
           createdAt: new Date(),
+          updated_at: new Date(),
+        },
+        $setOnInsert: {
+          created_at: new Date(),
         },
       },
       { upsert: true }
