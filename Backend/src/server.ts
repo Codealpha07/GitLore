@@ -22,6 +22,9 @@ import { eventsRouter } from "./routes/events";
 import { enforcementRouter } from "./routes/enforcement";
 import { autofixRouter } from "./routes/autofix";
 
+// PR Intelligence QA (dummy): harmless marker on server bootstrap path. Mirrors “feature landed →
+// reverted on main → small follow-up touch” so overlap / KG tests have a realistic diff. Delete after QA.
+
 /** Comma-separated in CORS_ORIGIN; first entry is default for non-browser clients. */
 function allowedCorsOrigins(): string[] {
   const raw = process.env.CORS_ORIGIN || "http://localhost:8080,http://127.0.0.1:8080";

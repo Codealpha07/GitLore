@@ -21,6 +21,8 @@ import {
 import { useRealtimeUpdates, formatCacheEventTime } from "@/hooks/useRealtimeUpdates";
 import { startGithubOAuth as oauthNav } from "@/lib/githubOAuth";
 
+// PR Intelligence QA (dummy): overview page is a common conflict surface when re-introducing UX after a revert.
+
 const HealthBar = ({ score, max }: { score: number; max: number }) => (
   <div className="flex items-center gap-3">
     <progress className="overview-health-progress h-2 w-full overflow-hidden rounded-sm" value={score} max={max} />
